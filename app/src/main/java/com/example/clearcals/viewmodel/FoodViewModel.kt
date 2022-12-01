@@ -1,4 +1,4 @@
-package com.example.clearcals
+package com.example.clearcals.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

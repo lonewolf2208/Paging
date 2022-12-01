@@ -1,4 +1,4 @@
-package com.example.clearcals
+package com.example.clearcals.util
 
 sealed class Response<T>(val data : T?=null , val errorMessage : String? =null)
 {

@@ -1,17 +1,10 @@
 package com.example.clearcals.paging
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.clearcals.MainActivity
-import com.example.clearcals.Response
-import com.example.clearcals.model.FoodData
 import com.example.clearcals.model.Result
 import com.example.clearcals.retrofit.Api
-import retrofit2.Call
-import retrofit2.Callback
 import java.lang.Exception
 
 class PagingSource(val foodApi:Api, var query :String):PagingSource<Int,Result>(){
@@ -21,7 +14,7 @@ class PagingSource(val foodApi:Api, var query :String):PagingSource<Int,Result>(
             val position=params.key ?:1
             Log.d("ADSasd",position.toString())
 
-              var response= foodApi.getData(position,5,query,"aeeefa3393msh440179d43d76886p1ace70jsnffeef512a4bf","tasty.p.rapidapi.com")
+              var response= foodApi.getData(position,5,query,"065bc65c47msh70e4ee6f58b9232p1e53efjsnd242f738bc2e","tasty.p.rapidapi.com")
 
              LoadResult.Page(
                 data = response.results,
